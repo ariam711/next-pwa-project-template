@@ -1,0 +1,13 @@
+import withSerwistInit from '@serwist/next';
+
+const withSerwist = withSerwistInit({
+  swSrc: 'src/sw.ts',
+  swDest: 'public/sw.js',
+  disable: process.env.NODE_ENV !== 'production',
+});
+
+export default withSerwist({
+  // Next.js config
+  reactStrictMode: true,
+  turbopack: {},
+});
